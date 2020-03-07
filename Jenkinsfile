@@ -12,7 +12,7 @@ pipeline {
 
     stage('TF Plan') {
       steps {
-		  sh 'pwd'
+		  sh 'cd environments/$BRANCH_NAME'
           sh 'terraform init'
           sh 'terraform plan -out myplan'
       }      
@@ -28,6 +28,7 @@ pipeline {
 
     stage('TF Apply') {
       steps {
+		  sh 'cd environments/$BRANCH_NAME'
           sh 'terraform apply -input=false myplan'
       }
     }
