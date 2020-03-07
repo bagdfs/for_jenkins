@@ -13,6 +13,7 @@ pipeline {
     stage('TF Plan') {
       steps {
 		  sh 'cd environments/dev/'
+		  sh 'pwd'
           sh 'terraform init'
           sh 'terraform plan -out myplan'
       }      
