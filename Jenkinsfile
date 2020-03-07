@@ -14,8 +14,8 @@ pipeline {
       steps {
 		  sh 'cd environments/dev/'
 		  sh 'pwd'
-          sh 'sudo su root;cd environments/dev/;terraform init'
-          sh 'sudo su root;cd environments/dev/;terraform plan -out myplan'
+          sh 'cd environments/dev/;terraform init'
+          sh 'cd environments/dev/;terraform plan -out myplan'
       }      
     }
 
@@ -29,8 +29,8 @@ pipeline {
 
     stage('TF Apply') {
       steps {
-		  sh 'sudo su root;cd environments/dev/'
-          sh 'sudo su root;cd environments/dev/;terraform apply -input=false myplan'
+		  sh 'cd environments/dev/'
+          sh 'cd environments/dev/;terraform apply -input=false myplan'
       }
     }
 
