@@ -1,1 +1,1 @@
-# for_jenkins
+# bh_gcp_infra_build
