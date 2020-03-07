@@ -3,7 +3,7 @@ locals {
 }
 
 provider "google" {
-  credentials = "${file("/usr/bin/creds/serviceaccount.json")}"
+  credentials = "/usr/bin/creds/serviceaccount.json"
   project = "${var.project}"
 }
 
