@@ -12,3 +12,9 @@ module "gcs" {
   project = "${var.project}"
   env     = "${local.env}"
 }
+
+module "bigquery" {
+  source  = "../../modules/bigquery"
+  project = "${var.project}"
+  env     = "${local.env}"
+}
