@@ -1,4 +1,4 @@
-resource "google_bigquery_dataset" "dataset" {
+resource "google_bigquery_dataset" "vm-mat-raw-ds" {
   dataset_id                  = "vm-mat-bq-raw-layer-${var.env}"
   friendly_name               = "test"
   description                 = "This is a test description"
@@ -15,7 +15,7 @@ resource "google_bigquery_dataset" "dataset" {
   }
 }
 
-resource "google_bigquery_dataset" "dataset" {
+resource "google_bigquery_dataset" "vm-mat-staging-ds" {
   dataset_id                  = "vm-mat-bq-staging-layer-${var.env}"
   friendly_name               = "test"
   description                 = "This is a test description"
